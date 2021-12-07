@@ -38,6 +38,7 @@ export abstract class RangeBase {
     return (value.lower === this.lower && value.upper === this.upper);
   }
 
-  abstract isFullInclude(value: RangeInterface): boolean;
-
+  isFullInclude(value: RangeInterface): boolean {
+    return this.isContain(value.lower) && this.isContain(value.upper);
+  }
 }
