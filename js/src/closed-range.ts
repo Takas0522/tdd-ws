@@ -10,8 +10,4 @@ export class ClosedRange extends RangeBase implements RangeInterface {
     return (value >= this.lower && value <= this.upper);
   }
 
-  isFullInclude(value: RangeInterface): boolean {
-    return this.isContain(value.lower) && this.isContain(value.upper);
-  }
-
 }
