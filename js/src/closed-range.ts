@@ -6,6 +6,10 @@ export class ClosedRange extends RangeBase implements RangeInterface {
     super(lower, upper);
   }
 
+  toString(): string {
+    return `[${this.lower},${this.upper}]`;
+  }
+
   isContain(value: number): boolean {
     return (value >= this.lower && value <= this.upper);
   }

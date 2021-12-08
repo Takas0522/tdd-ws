@@ -28,10 +28,6 @@ export abstract class RangeBase {
     return this._upper;
   }
 
-  toString(): string {
-    return `[${this._lower},${this._upper}]`;
-  }
-
   abstract isContain(value: number): boolean;
 
   isEqual(value: RangeInterface): boolean {
